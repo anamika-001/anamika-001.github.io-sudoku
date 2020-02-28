@@ -1,25 +1,24 @@
 .game-board {
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
-  height: 30%;
+
   border-spacing: 0;
   border-collapse: collapse;
   table-layout: fixed;
   border: 5px solid #000000;
-  background-color:wheat;
+  background-color: skyblue;
 }
 
 html,
 body {
-display: flex;
-align-items: center;
-justify-content: center;
-flex-flow: column;
- overflow: hidden;
-margin: 0;
-font-family: "Lato", sans-serif;
-background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  overflow: hidden;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: pink;
 }
 h2 {
   text-align: center;
@@ -33,10 +32,9 @@ h2 {
   text-transform: uppercase;
   padding: 20px 0;
 }
-h4{
-
+h4 {
   text-align: center;
-  font-style: italic ;
+  font-style: italic;
 }
 
 #instructions {
@@ -57,7 +55,7 @@ h4{
   text-align: center;
   display: flex;
   flex-direction: column;
-  
+
   align-items: center;
   justify-content: center;
   flex-flow: column;
@@ -67,25 +65,23 @@ h4{
 #button-novice {
   font-size: 40px;
   background-color: lightgreen;
-  margin: .25em;
+  margin: 0.25em;
 }
 
 #button-intermediate {
   font-size: 40px;
   background-color: rgb(233, 109, 64);
-  margin: .25em;
+  margin: 0.25em;
 }
 
 #button-expert {
-
   font-size: 40px;
   background-color: lightcoral;
-  margin: .15em;
+  margin: 0.15em;
 }
 
-
 #button-play {
-  border-radius:10px ;
+  border-radius: 10px;
   font-size: 40px;
   border: none;
   background-color: green;
@@ -98,7 +94,6 @@ button:hover {
 .hidden {
   visibility: hidden;
 }
-
 
 colgroup {
   border: 3px solid black;
@@ -119,7 +114,7 @@ button {
   margin: 30px;
   padding: 10px;
   background: gainsboro;
-  
+
   text-transform: uppercase;
   height: 100%;
   font-weight: 700;
@@ -152,7 +147,6 @@ button {
 }
 
 tr:first-child {
-  
   border-top: 3px solid black;
 }
 
@@ -167,14 +161,13 @@ tr:nth-child(4) {
 tr:nth-child(7) {
   border-top: 3px solid black;
 }
-td{
+td {
   height: 40px;
   width: 40px;
   border: 1px solid #000000;
-text-align: center;
-vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
 }
-
 
 input {
   color: black;
@@ -189,9 +182,9 @@ input {
 }
 
 .incorrect {
-  background-color: rgba(255, 0 , 0, .4);
+  background-color: rgba(255, 0, 0, 0.4);
 }
 
 .incorrect-input {
-  background-color: rgba(255, 0 , 0, 0);
+  background-color: rgba(255, 0, 0, 0);
 }
