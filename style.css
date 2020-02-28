@@ -1,23 +1,31 @@
+.game-board {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 30%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 5px solid #000000;
+  background-color: whitesmoke;
+}
+
 html,
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-
-  margin: 0;
-
-  overflow: hidden;
-
-  font-family: "Lato", sans-serif;
-
-  background-color: pink;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-flow: column;
+ overflow: hidden;
+margin: 0;
+font-family: "Lato", sans-serif;
+background-color: pink;
 }
-h1 {
+h2 {
   text-align: center;
   line-height: 1.1;
   font-weight: bolder;
-  font-size: 5rem;
+  font-size: 3em;
   font-style: italic;
   color: black;
 
@@ -25,15 +33,97 @@ h1 {
   text-transform: uppercase;
   padding: 20px 0;
 }
+h4{
+
+  text-align: center;
+  font-style: italic ;
+}
+
+#instructions {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 60%;
+  font-size: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#div_selection {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  width: 40%;
+}
+
+#button-novice {
+  font-size: 40px;
+  background-color: lightgreen;
+  margin: .25em;
+}
+
+#button-intermediate {
+  font-size: 40px;
+  background-color: rgb(233, 109, 64);
+  margin: .25em;
+}
+
+#button-expert {
+
+  font-size: 40px;
+  background-color: lightcoral;
+  margin: .15em;
+}
+
+
+#button-play {
+  border-radius:10px ;
+  font-size: 40px;
+  border: none;
+  background-color: green;
+}
+button:hover {
+  color: white;
+  background-color: steelblue;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+
+colgroup {
+  border: 3px solid black;
+}
+
+td {
+  border: 1px solid gray;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 4em;
+  width: 1.5em;
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: crimson;
+}
 button {
   margin: 30px;
   padding: 10px;
   background: gainsboro;
-  border: none;
+  
   text-transform: uppercase;
   height: 100%;
   font-weight: 700;
-  color: steelblue;
+  color: black;
   letter-spacing: 1px;
   font-size: inherit;
   transition: all 0.3s;
@@ -41,19 +131,50 @@ button {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
 }
-button:hover {
-  color: white;
-  background-color: steelblue;
-}
-table {
-  border: 5px solid #000000;
+
+#controls {
+  text-align: center;
+  margin: 2em;
 }
 
-td {
-  border: 1px solid #000000;
-  text-align: center;
-  vertical-align: middle;
+#button-validate {
+  border: hidden;
+  border-radius: 10pc;
+  font-size: 1.5em;
+  background-color: steelblue;
 }
+
+#button-solve {
+  border: hidden;
+  border-radius: 10pc;
+  background-color: magenta;
+  font-size: 1.5em;
+}
+
+tr:first-child {
+  
+  border-top: 3px solid black;
+}
+
+tr:first-child {
+  border-top: 3px solid black;
+}
+
+tr:nth-child(4) {
+  border-top: 3px solid black;
+}
+
+tr:nth-child(7) {
+  border-top: 3px solid black;
+}
+td{
+  height: 40px;
+  width: 40px;
+  border: 1px solid #000000;
+text-align: center;
+vertical-align: middle;
+}
+
 
 input {
   color: black;
@@ -67,121 +188,10 @@ input {
   outline: none;
 }
 
-input:disabled {
-  background-color: skyblue;
-  color: black;
-}
-#cell-0,
-#cell-1,
-#cell-2 {
-  border-top: 2px solid #000000;
-}
-#cell-2,
-#cell-8 {
-  border-right: 2px solid #000000;
-}
-#cell-6,
-#cell-7,
-#cell-8 {
-  border-bottom: 2px solid #000000;
-}
-#cell-0,
-#cell-6 {
-  border-left: 2px solid #000000;
+.incorrect {
+  background-color: rgba(255, 0 , 0, .4);
 }
 
-#cell-3,
-#cell-4,
-#cell-5 {
-  border-top: 2px solid #000000;
+.incorrect-input {
+  background-color: rgba(255, 0 , 0, 0);
 }
-#cell-5,
-#cell-11 {
-  border-right: 2px solid #000000;
-}
-#cell-9,
-#cell-10,
-#cell-11 {
-  border-bottom: 2px solid #000000;
-}
-#cell-3,
-#cell-9 {
-  border-left: 2px solid #000000;
-}
-
-#cell-12,
-#cell-13,
-#cell-14 {
-  border-top: 2px solid #000000;
-}
-#cell-14,
-#cell-20 {
-  border-right: 2px solid #000000;
-}
-#cell-18,
-#cell-19,
-#cell-20 {
-  border-bottom: 2px solid #000000;
-}
-#cell-12,
-#cell-18 {
-  border-left: 2px solid #000000;
-}
-
-#cell-15,
-#cell-16,
-#cell-17 {
-  border-top: 2px solid #000000;
-}
-#cell-23,
-#cell-17 {
-  border-right: 2px solid #000000;
-}
-#cell-21,
-#cell-22,
-#cell-23 {
-  border-bottom: 2px solid #000000;
-}
-#cell-15,
-#cell-21 {
-  border-left: 2px solid #000000;
-}
-
-#cell-24,
-#cell-25,
-#cell-26 {
-  border-top: 2px solid #000000;
-}
-#cell-26,
-#cell-32 {
-  border-right: 2px solid #000000;
-}
-#cell-30,
-#cell-31,
-#cell-32 {
-  border-bottom: 2px solid #000000;
-}
-#cell-30,
-#cell-24 {
-  border-left: 2px solid #000000;
-}
-
-#cell-27,
-#cell-28,
-#cell-29 {
-  border-top: 2px solid #000000;
-}
-#cell-35,
-#cell-29 {
-  border-right: 2px solid #000000;
-}
-#cell-33,
-#cell-34,
-#cell-35 {
-  border-bottom: 2px solid #000000;
-}
-#cell-33,
-#cell-27 {
-  border-left: 2px solid #000000;
-}
-
